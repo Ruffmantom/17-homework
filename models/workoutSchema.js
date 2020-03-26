@@ -7,7 +7,8 @@ var workoutSchema = new Schema({
     },
     exercises: [{
         name: {
-            type: String
+            type: String,
+            required: true
         },
         duration: {
             type: Number
@@ -27,6 +28,6 @@ var workoutSchema = new Schema({
     }]
 });
 
-var Workout = mongoose.model("Exercise", workoutSchema);
+var Workout = mongoose.model("Workout", workoutSchema);
 
 module.exports = Workout;
