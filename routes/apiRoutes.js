@@ -7,7 +7,7 @@ Router.get("/api/workouts/range", function (req, res) {
     db.Workout.find({})
         .then(function (workouts) {
             res.json(workouts);
-            console.log(workouts)
+            console.log(workouts);
         })
         .catch(function (error) {
             res.json(error)
@@ -16,7 +16,7 @@ Router.get("/api/workouts/range", function (req, res) {
 });
 
 Router.get("/api/workouts", function (req, res) {
-    db.Workout.find()
+    db.Workout.find({})
         .then(function (workouts) {
             res.json(workouts);
             console.log(workouts)
