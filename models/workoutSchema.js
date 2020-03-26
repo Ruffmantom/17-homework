@@ -8,7 +8,6 @@ var workoutSchema = new Schema({
     exercises: [{
         name: {
             type: String,
-            required: true
         },
         duration: {
             type: Number
