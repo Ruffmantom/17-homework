@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const express = require("express");
+var morgan = require('morgan');
 
 const app = express();
 const PORT = process.env.PORT || 3000
@@ -8,6 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
+morgan(':method :url :status :res[content-length] - :response-time ms')
 
 // routes
 app.use(require("./routes/apiRoutes.js"));
